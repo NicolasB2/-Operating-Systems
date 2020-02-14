@@ -1,0 +1,805 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200214092630
+Nombre de usuario: LAPTOP-PSQO0K18\Nicolas Biojo Bermeo
+Usuario RunAs: LAPTOP-PSQO0K18\Nicolas Biojo Bermeo
+Nombre de la configuración: 
+Máquina: LAPTOP-PSQO0K18 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 1792
+PSVersion: 5.1.17763.1007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1007
+BuildVersion: 10.0.17763.1007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Nicolas Biojo Bermeo\Documents\Github\Operating_Systems\Class1\Transcript.txt
+PS C:\Windows\system32> help html
+
+NOMBRE
+    ConvertTo-Html
+
+SINOPSIS
+    Converts Microsoft .NET Framework objects into HTML that can be displayed in a Web browser.
+
+
+SINTAXIS
+    ConvertTo-Html [[-Property] <Object[]>] [[-Head] <String[]>] [[-Title] <String>] [[-Body] <String[]>] [-As {Table | List}] [-CssUri <Uri>]
+    [-InputObject <PSObject>] [-PostContent <String[]>] [-PreContent <String[]>] [<CommonParameters>]
+
+    ConvertTo-Html [[-Property] <Object[]>] [-As {Table | List}] [-Fragment] [-InputObject <PSObject>] [-PostContent <String[]>] [-PreContent
+    <String[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The ConvertTo-Html cmdlet converts .NET Framework objects into HTML that can be displayed in a Web browser. You can use this cmdlet to display the
+    output of a command in a Web page.
+
+    You can use the parameters of ConvertTo-Html to select object properties, to specify a table or list format, to specify the HTML page title, to
+    add text before and after the object, and to return only the table or list fragment, instead of a strict DTD page.
+
+    When you submit multiple objects to ConvertTo-Html , Windows PowerShell creates the table (or list) based on the properties of the first object
+    that you submit. If the remaining objects do not have one of the specified properties, the property value of that object is an empty cell. If the
+    remaining objects have additional properties, those property values are not included in the file.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821758
+    ConvertTo-Csv
+    ConvertTo-Json
+    ConvertTo-Xml
+    Export-Clixml
+    Import-Clixml
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help ConvertTo-Html -examples".
+    Para obtener más información, escriba: "get-help ConvertTo-Html -detailed".
+    Para obtener información técnica, escriba: "get-help ConvertTo-Html -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help ConvertTo-Html -online"
+
+
+PS C:\Windows\system32> help file
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Get-FileHash                      Function  Microsoft.PowerShell.U... Computes the hash value for a file by using a specified hash algorithm.
+Import-PowerShellDataFile         Function  Microsoft.PowerShell.U...
+New-TemporaryFile                 Function  Microsoft.PowerShell.U... Creates a temporary file.
+New-PSRoleCapabilityFile          Cmdlet    Microsoft.PowerShell.Core Creates a file that defines a set of capabilities to be exposed through a sess...
+New-PSSessionConfigurationFile    Cmdlet    Microsoft.PowerShell.Core Creates a file that defines a session configuration.
+Test-PSSessionConfigurationFile   Cmdlet    Microsoft.PowerShell.Core Verifies the keys and values in a session configuration file.
+Out-File                          Cmdlet    Microsoft.PowerShell.U... Sends output to a file.
+Unblock-File                      Cmdlet    Microsoft.PowerShell.U... Unblocks files that were downloaded from the Internet.
+New-ScriptFileInfo                Function  PowerShellGet             ...
+Test-ScriptFileInfo               Function  PowerShellGet             ...
+Update-ScriptFileInfo             Function  PowerShellGet             ...
+Add-BitsFile                      Cmdlet    BitsTransfer              Add-BitsFile...
+Set-AppXProvisionedDataFile       Cmdlet    Dism                      Set-AppXProvisionedDataFile...
+Test-FileCatalog                  Cmdlet    Microsoft.PowerShell.S... Test-FileCatalog...
+New-FileCatalog                   Cmdlet    Microsoft.PowerShell.S... New-FileCatalog...
+Get-NetConnectionProfile          Function  NetConnection             ...
+Set-NetConnectionProfile          Function  NetConnection             ...
+Get-NetFirewallProfile            Function  NetSecurity               ...
+Set-NetFirewallProfile            Function  NetSecurity               ...
+Disable-NetIPHttpsProfile         Function  NetworkTransition         ...
+Enable-NetIPHttpsProfile          Function  NetworkTransition         ...
+Get-SmbOpenFile                   Function  SmbShare                  ...
+Close-SmbOpenFile                 Function  SmbShare                  ...
+Remove-StorageFileServer          Function  Storage                   ...
+Get-SupportedFileSystems          Function  Storage                   ...
+Get-FileIntegrity                 Function  Storage                   ...
+Get-FileShareAccessControlEntry   Function  Storage                   ...
+Get-FileShare                     Function  Storage                   ...
+Clear-FileStorageTier             Function  Storage                   ...
+Remove-FileShare                  Function  Storage                   ...
+Block-FileShareAccess             Function  Storage                   ...
+Get-FileStorageTier               Function  Storage                   ...
+Revoke-FileShareAccess            Function  Storage                   ...
+Get-StorageFileServer             Function  Storage                   ...
+New-StorageFileServer             Function  Storage                   ...
+Set-FileStorageTier               Function  Storage                   ...
+Set-FileIntegrity                 Function  Storage                   ...
+New-FileShare                     Function  Storage                   ...
+Unblock-FileShareAccess           Function  Storage                   ...
+Set-StorageFileServer             Function  Storage                   ...
+Grant-FileShareAccess             Function  Storage                   ...
+Set-FileShare                     Function  Storage                   ...
+Repair-FileIntegrity              Function  Storage                   ...
+Debug-FileShare                   Function  Storage                   ...
+Set-StorageBusProfile             Function  StorageBusCache           ...
+FileSystem                        Provider  Microsoft.PowerShell.Core Provides access to files and directories.
+about_Profiles                    HelpFile                            Describes how to create and use a Windows PowerShell profile.
+about_Session_Configuration_Files HelpFile                            Describes session configuration files, which can be used in a
+
+
+PS C:\Windows\system32> help *out*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Out-Default                       Cmdlet    Microsoft.PowerShell.Core Sends the output to the default formatter and to the default output cmdlet.
+Out-Host                          Cmdlet    Microsoft.PowerShell.Core Sends output to the command line.
+Out-Null                          Cmdlet    Microsoft.PowerShell.Core Deletes output instead of sending it down the pipeline.
+Out-File                          Cmdlet    Microsoft.PowerShell.U... Sends output to a file.
+Out-GridView                      Cmdlet    Microsoft.PowerShell.U... Sends output to an interactive table in a separate window.
+Out-Printer                       Cmdlet    Microsoft.PowerShell.U... Sends output to a printer.
+Out-String                        Cmdlet    Microsoft.PowerShell.U... Sends objects to the host as a series of strings.
+Write-Output                      Cmdlet    Microsoft.PowerShell.U... Sends the specified objects to the next command in the pipeline. If the comman...
+Get-WinCultureFromLanguageList... Cmdlet    International             Get-WinCultureFromLanguageListOptOut...
+Set-WinCultureFromLanguageList... Cmdlet    International             Set-WinCultureFromLanguageListOptOut...
+Get-WinAcceptLanguageFromLangu... Cmdlet    International             Get-WinAcceptLanguageFromLanguageListOptOut...
+Set-WinAcceptLanguageFromLangu... Cmdlet    International             Set-WinAcceptLanguageFromLanguageListOptOut...
+Get-NetRoute                      Function  NetTCPIP                  ...
+Find-NetRoute                     Function  NetTCPIP                  ...
+Set-NetRoute                      Function  NetTCPIP                  ...
+New-NetRoute                      Function  NetTCPIP                  ...
+Remove-NetRoute                   Function  NetTCPIP                  ...
+Export-StartLayoutEdgeAssets      Cmdlet    StartLayout               Export-StartLayoutEdgeAssets...
+Export-StartLayout                Cmdlet    StartLayout               Export-StartLayout...
+Import-StartLayout                Cmdlet    StartLayout               Import-StartLayout...
+Add-VpnConnectionRoute            Function  VpnClient                 ...
+Remove-VpnConnectionRoute         Function  VpnClient                 ...
+about_ActivityCommonParameters    HelpFile                            Describes the parameters that Windows PowerShell
+about_Aliases                     HelpFile                            Describes how to use alternate names for cmdlets and commands in Windows
+about_Arithmetic_Operators        HelpFile                            Describes the operators that perform arithmetic in Windows PowerShell.
+about_Arrays                      HelpFile                            Describes arrays, which are data structures designed to store
+about_Assignment_Operators        HelpFile                            Describes how to use operators to assign values to variables.
+about_Automatic_Variables         HelpFile                            Describes variables that store state information for Windows PowerShell.
+about_Break                       HelpFile                            Describes a statement you can use to immediately exit Foreach, For, While,
+about_Checkpoint-Workflow         HelpFile                            Describes the Checkpoint-Workflow activity, which
+about_CimSession                  HelpFile                            Describes a CimSession object and the difference between CIM sessions and
+about_Classes                     HelpFile                            Describes how you can use classes to develop in Windows PowerShell
+about_Command_Precedence          HelpFile                            Describes how Windows PowerShell determines which command to run.
+about_Command_Syntax              HelpFile                            Describes the syntax diagrams that are used in Windows PowerShell.
+about_Comment_Based_Help          HelpFile                            Describes how to write comment-based help topics for functions and scripts.
+about_CommonParameters            HelpFile                            Describes the parameters that can be used with any cmdlet.
+about_Comparison_Operators        HelpFile                            Describes the operators that compare values in Windows PowerShell.
+about_Continue                    HelpFile                            Describes how the Continue statement immediately returns the program flow
+about_Core_Commands               HelpFile                            Lists the cmdlets that are designed for use with Windows PowerShell
+about_Data_Sections               HelpFile                            Explains Data sections, which isolate text strings and other read-only
+about_Debuggers                   HelpFile                            Describes the Windows PowerShell debugger.
+about_DesiredStateConfiguration   HelpFile                            Provides a brief introduction to the Windows
+about_Do                          HelpFile                            Runs a statement list one or more times, subject to a While or Until
+about_Environment_Variables       HelpFile                            Describes how to access Windows environment variables in Windows
+about_Escape_Characters           HelpFile                            Introduces the escape character in Windows PowerShell and explains
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows event log that is
+about_Execution_Policies          HelpFile                            Describes the Windows PowerShell execution policies and explains
+about_For                         HelpFile                            Describes a language command you can use to run statements based on a
+about_ForEach-Parallel            HelpFile                            Describes the ForEach -Parallel language construct in
+about_Foreach                     HelpFile                            Describes a language command you can use to traverse all the items in a
+about_Format.ps1xml               HelpFile                            The Format.ps1xml files in Windows PowerShell define the default display
+about_Functions                   HelpFile                            Describes how to create and use functions in Windows PowerShell.
+about_Functions_Advanced          HelpFile                            Introduces advanced functions that act similar to cmdlets.
+about_Functions_Advanced_Methods  HelpFile                            Describes how functions that specify the CmdletBinding attribute can use
+about_Functions_Advanced_Param... HelpFile                            Explains how to add parameters to advanced functions.
+about_Functions_CmdletBindingA... HelpFile                            Describes the attribute that makes a function work like a
+about_Functions_OutputTypeAttr... HelpFile                            Describes an attribute that reports the type of object that the function
+about_Group_Policy_Settings       HelpFile                            Describes the Group Policy settings for Windows PowerShell
+about_Hash_Tables                 HelpFile                            Describes how to create, use, and sort hash tables in Windows PowerShell.
+about_Hidden                      HelpFile                            Describes the Hidden keyword, which hides class members from default Get-Membe...
+about_History                     HelpFile                            Describes how to get and run commands in the command history.
+about_If                          HelpFile                            Describes a language command you can use to run statement lists based
+about_InlineScript                HelpFile                            Describes the InlineScript activity, which runs Windows
+about_Jobs                        HelpFile                            Provides information about how Windows PowerShell background jobs run a
+about_Job_Details                 HelpFile                            Provides details about background jobs on local and remote computers.
+about_Join                        HelpFile                            Describes how the join operator (-join) combines multiple strings into a
+about_Language_Keywords           HelpFile                            Describes the keywords in the Windows PowerShell scripting language.
+about_Language_Modes              HelpFile                            Explains language modes and their effect on Windows
+about_Line_Editing                HelpFile                            Describes how to edit commands at the Windows PowerShell command prompt.
+about_Locations                   HelpFile                            Describes how to access items from the working location in Windows
+about_Logical_Operators           HelpFile                            Describes the operators that connect statements in Windows PowerShell.
+about_Methods                     HelpFile                            Describes how to use methods to perform actions on objects in Windows
+about_Modules                     HelpFile                            Explains how to install, import, and use Windows PowerShell modules.
+about_Objects                     HelpFile                            Provides essential information about objects in Windows PowerShell.
+about_Object_Creation             HelpFile                            Explains how to create objects in Windows PowerShell.
+about_Operators                   HelpFile                            Describes the operators that are supported by Windows PowerShell.
+about_Operator_Precedence         HelpFile                            Lists the Windows PowerShell operators in precedence order.
+about_PackageManagement           HelpFile                            PackageManagement is an aggregator for software package managers.
+about_Parallel                    HelpFile                            Describes the Parallel keyword, which runs the
+about_Parameters                  HelpFile                            Describes how to work with command parameters in Windows PowerShell.
+about_Parameters_Default_Values   HelpFile                            Describes how to set custom default values for the parameters of cmdlets and
+about_Parsing                     HelpFile                            Describes how Windows PowerShell parses commands.
+about_Parsing_LocTest             HelpFile                            Describes how Windows PowerShell parses commands.
+about_Path_Syntax                 HelpFile                            Describes the full and relative path name formats in Windows PowerShell.
+about_Pipelines                   HelpFile                            Combining commands into pipelines in the Windows PowerShell
+about_PowerShell.exe              HelpFile                            Explains how to use the PowerShell.exe command-line tool. Displays
+about_PowerShell_Ise.exe          HelpFile                            Explains how to use the PowerShell_Ise.exe command-line tool.
+about_Preference_Variables        HelpFile                            Variables that customize the behavior of Windows PowerShell
+about_Profiles                    HelpFile                            Describes how to create and use a Windows PowerShell profile.
+about_Prompts                     HelpFile                            Describes the Prompt function and demonstrates how to create a custom
+about_Properties                  HelpFile                            Describes how to use object properties in Windows PowerShell.
+about_Providers                   HelpFile                            Describes how Windows PowerShell providers provide access to data and
+about_PSConsoleHostReadLine       HelpFile                            Explains how to create a customize how Windows PowerShell reads input
+about_PSReadline                  HelpFile
+about_PSSessions                  HelpFile                            Describes Windows PowerShell sessions (PSSessions) and explains how to
+about_PSSession_Details           HelpFile                            Provides detailed information about Windows PowerShell sessions and the
+about_PSSnapins                   HelpFile                            Describes Windows PowerShell snap-ins and shows how to use and manage them.
+about_Quoting_Rules               HelpFile                            Describes rules for using single and double quotation marks
+about_Redirection                 HelpFile                            Explains how to redirect output from Windows PowerShell to text files.
+about_Ref                         HelpFile                            Describes how to create and use a reference variable type.
+about_Regular_Expressions         HelpFile                            Describes regular expressions in Windows PowerShell.
+about_Remote                      HelpFile                            Describes how to run remote commands in Windows PowerShell.
+about_Remote_Disconnected_Sess... HelpFile                            Explains how to disconnect from and reconnect to a PSSession
+about_Remote_FAQ                  HelpFile                            Contains questions and answers about running remote commands
+about_Remote_Jobs                 HelpFile                            Describes how to run background jobs on remote computers.
+about_Remote_Output               HelpFile                            Describes how to interpret and format the output of remote commands.
+about_Remote_Requirements         HelpFile                            Describes the system requirements and configuration requirements for
+about_Remote_Troubleshooting      HelpFile                            Describes how to troubleshoot remote operations in Windows PowerShell.
+about_Remote_Variables            HelpFile                            Explains how to use local and remote variables in remote
+about_Requires                    HelpFile                            Prevents a script from running without the required elements.
+about_Reserved_Words              HelpFile                            Lists the reserved words that cannot be used as identifiers because they
+about_Return                      HelpFile                            Exits the current scope, which can be a function, script, or script block.
+about_Run_With_PowerShell         HelpFile                            Explains how to use the "Run with PowerShell" feature to run
+about_Scheduled_Jobs              HelpFile                            Describes scheduled jobs and explains how to use and manage
+about_Scheduled_Jobs_Advanced     HelpFile                            Explains advanced scheduled job topics, including the file structure
+about_Scheduled_Jobs_Basics       HelpFile                            Explains how to create and manage scheduled jobs.
+about_Scheduled_Jobs_Troublesh... HelpFile                            Explains how to resolve problems with scheduled jobs
+about_Scopes                      HelpFile                            Explains the concept of scope in Windows PowerShell and shows how to set
+about_Scripts                     HelpFile                            Describes how to run and write scripts in Windows PowerShell.
+about_Script_Blocks               HelpFile                            Defines what a script block is and explains how to use script blocks in
+about_Script_Internationalization HelpFile                            Describes the script internationalization features of Windows PowerShell 2.0
+about_Sequence                    HelpFile                            Describes the Sequence keyword, which runs selected
+about_Session_Configurations      HelpFile                            Describes session configurations, which determine the users who can
+about_Session_Configuration_Files HelpFile                            Describes session configuration files, which can be used in a
+about_Signing                     HelpFile                            Explains how to sign scripts so that they comply with the Windows
+about_Special_Characters          HelpFile                            Describes the special characters that you can use to control how
+about_Splatting                   HelpFile                            Describes how to use splatting to pass parameters to commands
+about_Split                       HelpFile                            Explains how to use the Split operator to split one or more strings into
+about_Suspend-Workflow            HelpFile                            Describes the Suspend-Workflow activity, which suspends
+about_Switch                      HelpFile                            Explains how to use a switch to handle multiple If statements.
+about_Throw                       HelpFile                            Describes the Throw keyword, which generates a terminating error.
+about_Transactions                HelpFile                            Describes how to manage transacted operations in Windows PowerShell.
+about_Trap                        HelpFile                            Describes a keyword that handles a terminating error.
+about_Try_Catch_Finally           HelpFile                            Describes how to use the Try, Catch, and Finally blocks to handle
+about_Types.ps1xml                HelpFile                            Explains how to use Types.ps1xml files to extend the types of objects
+about_Type_Operators              HelpFile                            Describes the operators that work with Microsoft .NET Framework types.
+about_Updatable_Help              HelpFile                            Describes the updatable help system in Windows PowerShell.
+about_Variables                   HelpFile                            Describes how variables store values that can be used in Windows
+about_While                       HelpFile                            Describes a language statement that you can use to run a command block
+about_Wildcards                   HelpFile                            Describes how to use wildcard characters in Windows PowerShell.
+about_Windows_PowerShell_5.0      HelpFile                            Describes new features that are included in
+about_Windows_PowerShell_ISE      HelpFile                            Describes the features and system requirements of Windows PowerShell
+about_Windows_RT                  HelpFile                            Explains limitations of Windows PowerShell 4.0 on Windows RT 8.1.
+about_WMI                         HelpFile                            Windows Management Instrumentation (WMI) uses the
+about_WMI_Cmdlets                 HelpFile                            Provides background information about Windows Management Instrumentation
+about_WorkflowCommonParameters    HelpFile                            This topic describes the parameters that are valid on all Windows
+about_Workflows                   HelpFile                            Provides a brief introduction to the Windows
+about_WQL                         HelpFile                            Describes WMI Query Language (WQL), which can be
+about_WS-Management_Cmdlets       HelpFile                            Provides an overview of Web Services for Management (WS-Management) as
+WSManAbout                        HelpFile
+about_BeforeEach_AfterEach        HelpFile                            performed at the beginning and end of every It block. This can eliminate dupli...
+about_Mocking                     HelpFile                            Pester provides a set of Mocking functions making it easy to fake dependencies
+about_Pester                      HelpFile                            Pester is a BDD based test runner for PowerShell.
+about_should                      HelpFile                            Provides assertion convenience methods for comparing objects and throwing
+about_TestDrive                   HelpFile                            A PSDrive for file activity limited to the scope of a singe Describe or
+about_Scheduled_Jobs              HelpFile                            Describes scheduled jobs and explains how to use and manage
+about_Scheduled_Jobs_Advanced     HelpFile                            Explains advanced scheduled job topics, including the file structure
+about_Scheduled_Jobs_Basics       HelpFile                            Explains how to create and manage scheduled jobs.
+about_Scheduled_Jobs_Troublesh... HelpFile                            Explains how to resolve problems with scheduled jobs
+about_ActivityCommonParameters    HelpFile                            Describes the parameters that Windows PowerShell
+about_Checkpoint-Workflow         HelpFile                            Describes the Checkpoint-Workflow activity, which
+about_ForEach-Parallel            HelpFile                            Describes the ForEach -Parallel language construct in
+about_InlineScript                HelpFile                            Describes the InlineScript activity, which runs Windows
+about_Parallel                    HelpFile                            Describes the Parallel keyword, which runs the
+about_Sequence                    HelpFile                            Describes the Sequence keyword, which runs selected
+about_Suspend-Workflow            HelpFile                            Describes the Suspend-Workflow activity, which suspends
+about_WorkflowCommonParameters    HelpFile                            This topic describes the parameters that are valid on all Windows
+about_Workflows                   HelpFile                            Provides a brief introduction to the Windows
+
+
+PS C:\Windows\system32> help *out
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Get-WinCultureFromLanguageList... Cmdlet    International             Get-WinCultureFromLanguageListOptOut...
+Set-WinCultureFromLanguageList... Cmdlet    International             Set-WinCultureFromLanguageListOptOut...
+Get-WinAcceptLanguageFromLangu... Cmdlet    International             Get-WinAcceptLanguageFromLanguageListOptOut...
+Set-WinAcceptLanguageFromLangu... Cmdlet    International             Set-WinAcceptLanguageFromLanguageListOptOut...
+Export-StartLayout                Cmdlet    StartLayout               Export-StartLayout...
+Import-StartLayout                Cmdlet    StartLayout               Import-StartLayout...
+WSManAbout                        HelpFile
+
+
+PS C:\Windows\system32> help out*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Out-Default                       Cmdlet    Microsoft.PowerShell.Core Sends the output to the default formatter and to the default output cmdlet.
+Out-Host                          Cmdlet    Microsoft.PowerShell.Core Sends output to the command line.
+Out-Null                          Cmdlet    Microsoft.PowerShell.Core Deletes output instead of sending it down the pipeline.
+Out-File                          Cmdlet    Microsoft.PowerShell.U... Sends output to a file.
+Out-GridView                      Cmdlet    Microsoft.PowerShell.U... Sends output to an interactive table in a separate window.
+Out-Printer                       Cmdlet    Microsoft.PowerShell.U... Sends output to a printer.
+Out-String                        Cmdlet    Microsoft.PowerShell.U... Sends objects to the host as a series of strings.
+
+
+PS C:\Windows\system32> help Out-Printer
+
+NOMBRE
+    Out-Printer
+
+SINOPSIS
+    Sends output to a printer.
+
+
+SINTAXIS
+    Out-Printer [[-Name] <String>] [-InputObject <PSObject>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Out-Printer cmdlet sends output to the default printer or to an alternate printer, if one is specified.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821841
+    Out-File
+    Out-String
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Out-Printer -examples".
+    Para obtener más información, escriba: "get-help Out-Printer -detailed".
+    Para obtener información técnica, escriba: "get-help Out-Printer -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Out-Printer -online"
+
+
+PS C:\Windows\system32> help log
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Clear-EventLog                    Cmdlet    Microsoft.PowerShell.M... Clears all entries from specified event logs on the local or remote computers.
+Get-EventLog                      Cmdlet    Microsoft.PowerShell.M... Gets the events in an event log, or a list of the event logs, on the local or ...
+Limit-EventLog                    Cmdlet    Microsoft.PowerShell.M... Sets the event log properties that limit the size of the event log and the age...
+New-EventLog                      Cmdlet    Microsoft.PowerShell.M... Creates a new event log and a new event source on a local or remote computer.
+Remove-EventLog                   Cmdlet    Microsoft.PowerShell.M... Deletes an event log or unregisters an event source.
+Show-EventLog                     Cmdlet    Microsoft.PowerShell.M... Displays the event logs of the local or a remote computer in Event Viewer.
+Write-EventLog                    Cmdlet    Microsoft.PowerShell.M... Writes an event to an event log.
+Enable-AppBackgroundTaskDiagno... Cmdlet    AppBackgroundTask         Enable-AppBackgroundTaskDiagnosticLog...
+Disable-AppBackgroundTaskDiagn... Cmdlet    AppBackgroundTask         Disable-AppBackgroundTaskDiagnosticLog...
+Get-AppxLog                       Function  Appx                      ...
+Export-BinaryMiLog                Cmdlet    CimCmdlets                Export-BinaryMiLog...
+Import-BinaryMiLog                Cmdlet    CimCmdlets                Import-BinaryMiLog...
+Get-MpThreatCatalog               Function  Defender                  ...
+Get-DeliveryOptimizationLog       Cmdlet    DeliveryOptimization      Get-DeliveryOptimizationLog...
+Start-AutologgerConfig            Function  EventTracingManagement    ...
+Remove-AutologgerConfig           Function  EventTracingManagement    ...
+Get-AutologgerConfig              Function  EventTracingManagement    ...
+Update-AutologgerConfig           Function  EventTracingManagement    ...
+New-AutologgerConfig              Function  EventTracingManagement    ...
+Test-FileCatalog                  Cmdlet    Microsoft.PowerShell.S... Test-FileCatalog...
+New-FileCatalog                   Cmdlet    Microsoft.PowerShell.S... New-FileCatalog...
+Set-DtcLog                        Function  MsDtc                     ...
+Get-DtcLog                        Function  MsDtc                     ...
+Reset-DtcLog                      Function  MsDtc                     ...
+Get-PcsvDeviceLog                 Function  PcsvDevice                ...
+Clear-PcsvDeviceLog               Function  PcsvDevice                ...
+Get-LogProperties                 Function  PSDiagnostics             ...
+Set-LogProperties                 Function  PSDiagnostics             ...
+Stop-StorageDiagnosticLog         Function  Storage                   ...
+Start-StorageDiagnosticLog        Function  Storage                   ...
+Get-WindowsUpdateLog              Function  WindowsUpdate             ...
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows event log that is
+about_Logical_Operators           HelpFile                            Describes the operators that connect statements in Windows PowerShell.
+
+
+PS C:\Windows\system32> help Write-EventLog
+
+NOMBRE
+    Write-EventLog
+
+SINOPSIS
+    Writes an event to an event log.
+
+
+SINTAXIS
+    Write-EventLog [-LogName] <String> [-Source] <String> [-EventId] <Int32> [[-EntryType] {Error | Information | FailureAudit | SuccessAudit |
+    Warning}] [-Message] <String> [-Category <Int16>] [-ComputerName <String>] [-RawData <Byte[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Write-EventLog cmdlet writes an event to an event log.
+
+    To write an event to an event log, the event log must exist on the computer and the source must be registered for the event log.
+
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from logs that use the Windows
+    Event Log technology in Windows Vista and later versions of the Windows operating system, use the Get-WinEvent cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821651
+    Clear-EventLog
+    Get-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Write-EventLog -examples".
+    Para obtener más información, escriba: "get-help Write-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help Write-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Write-EventLog -online"
+
+
+PS C:\Windows\system32> help Get-EventLog
+
+NOMBRE
+    Get-EventLog
+
+SINOPSIS
+    Gets the events in an event log, or a list of the event logs, on the local or remote computers.
+
+
+SINTAXIS
+    Get-EventLog [-LogName] <String> [[-InstanceId] <Int64[]>] [-After <DateTime>] [-AsBaseObject] [-Before <DateTime>] [-ComputerName <String[]>]
+    [-EntryType {Error | Information | FailureAudit | SuccessAudit | Warning}] [-Index <Int32[]>] [-Message <String>] [-Newest <Int32>] [-Source
+    <String[]>] [-UserName <String[]>] [<CommonParameters>]
+
+    Get-EventLog [-AsString] [-ComputerName <String[]>] [-List] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-EventLog cmdlet gets events and event logs on the local and remote computers.
+
+    You can use the parameters of this cmdlet to search for events by using their property values. This cmdlet gets only the events that match all of
+    the specified property values.
+
+    The cmdlets that contain the EventLog noun work only on classic event logs. To get events from logs that use the Windows Event Log technology in
+    Windows Vista and later versions of Windows, use Get-WinEvent.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821585
+    Clear-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-EventLog -examples".
+    Para obtener más información, escriba: "get-help Get-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help Get-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-EventLog -online"
+
+
+PS C:\Windows\system32> help *alias*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Export-Alias                      Cmdlet    Microsoft.PowerShell.U... Exports information about currently defined aliases to a file.
+Get-Alias                         Cmdlet    Microsoft.PowerShell.U... Gets the aliases for the current session.
+Import-Alias                      Cmdlet    Microsoft.PowerShell.U... Imports an alias list from a file.
+New-Alias                         Cmdlet    Microsoft.PowerShell.U... Creates a new alias.
+Set-Alias                         Cmdlet    Microsoft.PowerShell.U... Creates or changes an alias for a cmdlet or other command element in the curre...
+Alias                             Provider  Microsoft.PowerShell.Core Provides access to the Windows PowerShell aliases and the values that they rep...
+about_Aliases                     HelpFile                            Describes how to use alternate names for cmdlets and commands in Windows
+
+
+PS C:\Windows\system32> help *security*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Set-NetFirewallSecurityFilter     Function  NetSecurity               ...
+Get-NetFirewallSecurityFilter     Function  NetSecurity               ...
+
+
+PS C:\Windows\system32> Get-EventLog  -LogName Security -Newest 100
+
+   Index Time          EntryType   Source                 InstanceID Message
+   ----- ----          ---------   ------                 ---------- -------
+  219695 feb. 14 09:26 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219694 feb. 14 09:26 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  219693 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219692 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219691 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219690 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219689 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219688 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219687 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219686 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219685 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219684 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219683 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219682 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219681 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219680 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219679 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219678 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219677 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219676 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219675 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219674 feb. 14 09:21 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219673 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219672 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219671 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219670 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219669 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219668 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219667 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219666 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219665 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219664 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219663 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219662 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219661 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219660 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219659 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219658 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219657 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219656 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219655 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219654 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219653 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219652 feb. 14 09:20 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219651 feb. 14 09:20 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219650 feb. 14 09:20 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  219649 feb. 14 09:14 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219648 feb. 14 09:14 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219647 feb. 14 09:14 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219646 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219645 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219644 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219643 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219642 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219641 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219640 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219639 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219638 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219637 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219636 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219635 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219634 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219633 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219632 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219631 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219630 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219629 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219628 feb. 14 09:13 SuccessA... Microsoft-Windows...         5382 Se leyeron las credenciales de bóveda. ...
+  219627 feb. 14 09:08 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219626 feb. 14 09:08 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  219625 feb. 14 09:08 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219624 feb. 14 09:08 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  219623 feb. 14 09:07 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219622 feb. 14 09:07 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219621 feb. 14 09:07 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219620 feb. 14 09:07 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219619 feb. 14 09:07 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219618 feb. 14 09:07 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219617 feb. 14 09:07 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219616 feb. 14 09:07 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  219615 feb. 14 09:07 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219614 feb. 14 09:07 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  219613 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219612 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219611 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219610 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219609 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219608 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219607 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219606 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219605 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219604 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219603 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219602 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219601 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219600 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219599 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219598 feb. 14 09:01 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron....
+  219597 feb. 14 09:01 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesión....
+  219596 feb. 14 09:01 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+
+
+PS C:\Windows\system32> help *remote*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+about_Remote                      HelpFile                            Describes how to run remote commands in Windows PowerShell.
+about_Remote_Disconnected_Sess... HelpFile                            Explains how to disconnect from and reconnect to a PSSession
+about_Remote_FAQ                  HelpFile                            Contains questions and answers about running remote commands
+about_Remote_Jobs                 HelpFile                            Describes how to run background jobs on remote computers.
+about_Remote_Output               HelpFile                            Describes how to interpret and format the output of remote commands.
+about_Remote_Requirements         HelpFile                            Describes the system requirements and configuration requirements for
+about_Remote_Troubleshooting      HelpFile                            Describes how to troubleshoot remote operations in Windows PowerShell.
+about_Remote_Variables            HelpFile                            Explains how to use local and remote variables in remote
+
+
+PS C:\Windows\system32> help *services*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Clear-Host                        Function                            Clears the display in the host program.
+New-PSSessionConfigurationFile    Cmdlet    Microsoft.PowerShell.Core Creates a file that defines a session configuration.
+New-PSSessionOption               Cmdlet    Microsoft.PowerShell.Core Creates an object that contains advanced options for a PSSession.
+Register-PSSessionConfiguration   Cmdlet    Microsoft.PowerShell.Core Creates and registers a new session configuration.
+Where-Object                      Cmdlet    Microsoft.PowerShell.Core Selects objects from a collection based on their property values.
+Add-Type                          Cmdlet    Microsoft.PowerShell.U... Adds a.NET Framework type (a class) to a Windows PowerShell session.
+ConvertFrom-Csv                   Cmdlet    Microsoft.PowerShell.U... Converts object properties in comma-separated value (CSV) format into CSV vers...
+ConvertTo-Html                    Cmdlet    Microsoft.PowerShell.U... Converts Microsoft .NET Framework objects into HTML that can be displayed in a...
+Format-List                       Cmdlet    Microsoft.PowerShell.U... Formats the output as a list of properties in which each property appears on a...
+Format-Table                      Cmdlet    Microsoft.PowerShell.U... Formats the output as a table.
+Get-Member                        Cmdlet    Microsoft.PowerShell.U... Gets the properties and methods of objects.
+Invoke-RestMethod                 Cmdlet    Microsoft.PowerShell.U... Sends an HTTP or HTTPS request to a RESTful web service.
+New-Object                        Cmdlet    Microsoft.PowerShell.U... Creates an instance of a Microsoft .NET Framework or COM object.
+Select-Xml                        Cmdlet    Microsoft.PowerShell.U... Finds text in an XML string or document.
+Sort-Object                       Cmdlet    Microsoft.PowerShell.U... Sorts objects by property values.
+Write-Information                 Cmdlet    Microsoft.PowerShell.U... Specifies how Windows PowerShell handles information stream data for a command.
+Get-HotFix                        Cmdlet    Microsoft.PowerShell.M... Gets the hotfixes that have been applied to the local and remote computers.
+Get-Service                       Cmdlet    Microsoft.PowerShell.M... Gets the services on a local or remote computer.
+Get-WmiObject                     Cmdlet    Microsoft.PowerShell.M... Gets instances of WMI classes or information about the available classes.
+New-Service                       Cmdlet    Microsoft.PowerShell.M... Creates a new Windows service.
+New-WebServiceProxy               Cmdlet    Microsoft.PowerShell.M... Creates a Web service proxy object that lets you use and manage the Web servic...
+Restart-Computer                  Cmdlet    Microsoft.PowerShell.M... Restarts ("reboots") the operating system on local and remote computers.
+Restart-Service                   Cmdlet    Microsoft.PowerShell.M... Stops and then starts one or more services.
+Resume-Service                    Cmdlet    Microsoft.PowerShell.M... Resumes one or more suspended (paused) services.
+Set-Service                       Cmdlet    Microsoft.PowerShell.M... Starts, stops, and suspends a service, and changes its properties.
+Start-Service                     Cmdlet    Microsoft.PowerShell.M... Starts one or more stopped services.
+Stop-Process                      Cmdlet    Microsoft.PowerShell.M... Stops one or more running processes.
+Stop-Service                      Cmdlet    Microsoft.PowerShell.M... Stops one or more running services.
+Suspend-Service                   Cmdlet    Microsoft.PowerShell.M... Suspends (pauses) one or more running services.
+about_Arithmetic_Operators        HelpFile                            Describes the operators that perform arithmetic in Windows PowerShell.
+about_Assignment_Operators        HelpFile                            Describes how to use operators to assign values to variables.
+about_Command_Syntax              HelpFile                            Describes the syntax diagrams that are used in Windows PowerShell.
+about_DesiredStateConfiguration   HelpFile                            Provides a brief introduction to the Windows
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows event log that is
+about_Functions                   HelpFile                            Describes how to create and use functions in Windows PowerShell.
+about_Parallel                    HelpFile                            Describes the Parallel keyword, which runs the
+about_Pipelines                   HelpFile                            Combining commands into pipelines in the Windows PowerShell
+about_Preference_Variables        HelpFile                            Variables that customize the behavior of Windows PowerShell
+about_Properties                  HelpFile                            Describes how to use object properties in Windows PowerShell.
+about_Remote                      HelpFile                            Describes how to run remote commands in Windows PowerShell.
+about_Remote_FAQ                  HelpFile                            Contains questions and answers about running remote commands
+about_Remote_Requirements         HelpFile                            Describes the system requirements and configuration requirements for
+about_Scripts                     HelpFile                            Describes how to run and write scripts in Windows PowerShell.
+about_Sequence                    HelpFile                            Describes the Sequence keyword, which runs selected
+about_Session_Configurations      HelpFile                            Describes session configurations, which determine the users who can
+about_Types.ps1xml                HelpFile                            Explains how to use Types.ps1xml files to extend the types of objects
+about_Variables                   HelpFile                            Describes how variables store values that can be used in Windows
+about_Wildcards                   HelpFile                            Describes how to use wildcard characters in Windows PowerShell.
+about_Windows_PowerShell_5.0      HelpFile                            Describes new features that are included in
+about_WMI_Cmdlets                 HelpFile                            Provides background information about Windows Management Instrumentation
+about_WS-Management_Cmdlets       HelpFile                            Provides an overview of Web Services for Management (WS-Management) as
+about_Parallel                    HelpFile                            Describes the Parallel keyword, which runs the
+about_Sequence                    HelpFile                            Describes the Sequence keyword, which runs selected
+
+
+PS C:\Windows\system32> help Get-Service
+
+NOMBRE
+    Get-Service
+
+SINOPSIS
+    Gets the services on a local or remote computer.
+
+
+SINTAXIS
+    Get-Service [-ComputerName <String[]>] [-DependentServices] -DisplayName <String[]> [-Exclude <String[]>] [-Include <String[]>]
+    [-RequiredServices] [<CommonParameters>]
+
+    Get-Service [-ComputerName <String[]>] [-DependentServices] [-Exclude <String[]>] [-Include <String[]>] [-InputObject <ServiceController[]>]
+    [-RequiredServices] [<CommonParameters>]
+
+    Get-Service [[-Name] <String[]>] [-ComputerName <String[]>] [-DependentServices] [-Exclude <String[]>] [-Include <String[]>] [-RequiredServices]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Service cmdlet gets objects that represent the services on a local computer or on a remote computer, including running and stopped
+    services.
+
+    You can direct this cmdlet to get only particular services by specifying the service name or display name of the services, or you can pipe service
+    objects to this cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821593
+    New-Service
+    Restart-Service
+    Resume-Service
+    Set-Service
+    Start-Service
+    Stop-Service
+    Suspend-Service
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-Service -examples".
+    Para obtener más información, escriba: "get-help Get-Service -detailed".
+    Para obtener información técnica, escriba: "get-help Get-Service -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-Service -online"
+
+
+PS C:\Windows\system32> help Get-Process
+
+NOMBRE
+    Get-Process
+
+SINOPSIS
+    Gets the processes that are running on the local computer or a remote computer.
+
+
+SINTAXIS
+    Get-Process [[-Name] <String[]>] [-ComputerName <String[]>] [-FileVersionInfo] [-Module] [<CommonParameters>]
+
+    Get-Process [-ComputerName <String[]>] [-FileVersionInfo] -Id <Int32[]> [-Module] [<CommonParameters>]
+
+    Get-Process [-ComputerName <String[]>] [-FileVersionInfo] -InputObject <Process[]> [-Module] [<CommonParameters>]
+
+    Get-Process -Id <Int32[]> -IncludeUserName [<CommonParameters>]
+
+    Get-Process [[-Name] <String[]>] -IncludeUserName [<CommonParameters>]
+
+    Get-Process -IncludeUserName -InputObject <Process[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Process cmdlet gets the processes on a local or remote computer.
+
+    Without parameters, this cmdlet gets all of the processes on the local computer. You can also specify a particular process by process name or
+    process ID (PID) or pass a process object through the pipeline to this cmdlet.
+
+    By default, this cmdlet returns a process object that has detailed information about the process and supports methods that let you start and stop
+    the process. You can also use the parameters of the Get-Process cmdlet to get file version information for the program that runs in the process
+    and to get the modules that the process loaded.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?linkid=821590
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-Process -examples".
+    Para obtener más información, escriba: "get-help Get-Process -detailed".
+    Para obtener información técnica, escriba: "get-help Get-Process -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-Process -online"
+
+
+PS C:\Windows\system32> help Out-File
+
+NOMBRE
+    Out-File
+
+SINOPSIS
+    Sends output to a file.
+
+
+SINTAXIS
+    Out-File [-FilePath] <String> [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii | default | oem}]
+    [-Append] [-Confirm] [-Force] [-InputObject <PSObject>] [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]
+
+    Out-File [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii | default | oem}] [-Append] [-Confirm] [-Force]
+    [-InputObject <PSObject>] -LiteralPath <String> [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Out-File cmdlet sends output to a file. You can use this cmdlet instead of the redirection operator (>) when you need to use its parameters.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821839
+    Out-GridView
+    Out-Printer
+    Out-String
+    Tee-Object
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Out-File -examples".
+    Para obtener más información, escriba: "get-help Out-File -detailed".
+    Para obtener información técnica, escriba: "get-help Out-File -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Out-File -online"
+
+
+PS C:\WINDOWS\system32>  Out-File -Width 200
+
+
+PS C:\Windows\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200214093805
+**********************
