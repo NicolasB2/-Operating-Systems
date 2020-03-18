@@ -1,0 +1,602 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200317195330
+Nombre de usuario: LAPTOP-PSQO0K18\Nicolas Biojo Bermeo
+Usuario RunAs: LAPTOP-PSQO0K18\Nicolas Biojo Bermeo
+Nombre de la configuración: 
+Máquina: LAPTOP-PSQO0K18 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 21720
+PSVersion: 5.1.17763.1007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1007
+BuildVersion: 10.0.17763.1007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Nicolas Biojo Bermeo\Documents\PowerShell_transcript.LAPTOP-PSQO0K18.BERKJJT3.20200317195330.txt
+PS C:\Windows\system32> Get-CimInstance win32_networkadapterconfiguration | Select-Object IP
+
+
+Description             : Microsoft Kernel Debug Network Adapter
+Index                   : 0
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : ASIX AX88772C USB2.0 to Fast Ethernet Adapter
+Index                   : 1
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IKEv2)
+Index                   : 2
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (L2TP)
+Index                   : 3
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPTP)
+Index                   : 4
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPPOE)
+Index                   : 5
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IP)
+Index                   : 6
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IPv6)
+Index                   : 7
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (Network Monitor)
+Index                   : 8
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Intel(R) Dual Band Wireless-AC 8265
+Index                   : 9
+IPAddress               : {192.168.1.53, fe80::1cf1:492f:54e1:bed0}
+IPConnectionMetric      : 55
+IPEnabled               : True
+IPFilterSecurityEnabled : False
+
+Description             : Bluetooth Device (Personal Area Network)
+Index                   : 10
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (SSTP)
+Index                   : 11
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 12
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 13
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft KM-TEST Loopback Adapter
+Index                   : 14
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : RAS Async Adapter
+Index                   : 15
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : TAP-Windows Adapter V9
+Index                   : 16
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+
+
+PS C:\Windows\system32> Get-WmiObject win32_quickfixengineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+LAPTOP-PSQ... Update           KB4534131     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+LAPTOP-PSQ... Update           KB4465065     NT AUTHORITY\SYSTEM  11/07/2019 12:00:00 a. m.
+LAPTOP-PSQ... Update           KB4486153     NT AUTHORITY\SYSTEM  9/09/2019 12:00:00 a. m.
+LAPTOP-PSQ... Update           KB4486161     NT AUTHORITY\SYSTEM  7/10/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4509095     NT AUTHORITY\SYSTEM  11/07/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4512577     NT AUTHORITY\SYSTEM  11/09/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4512937     NT AUTHORITY\SYSTEM  17/08/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4516115     NT AUTHORITY\SYSTEM  14/09/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4521862     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4523204     NT AUTHORITY\SYSTEM  13/11/2019 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4524244     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4539571     NT AUTHORITY\SYSTEM  12/03/2020 12:00:00 a. m.
+LAPTOP-PSQ... Security Update  KB4538461     NT AUTHORITY\SYSTEM  14/03/2020 12:00:00 a. m.
+
+
+PS C:\Windows\system32> Get-WmiObject win32_service | Select-Object Status, Startmode, Systemname
+
+Status   Startmode Systemname
+------   --------- ----------
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+Degraded Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Disabled  LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Manual    LAPTOP-PSQO0K18
+OK       Auto      LAPTOP-PSQO0K18
+
+
+PS C:\Windows\system32> Get-CimClass -Namespace root/SecurityCenter2 
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_Indication                      {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassIndication                 {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassDeletion                   {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassCreation                   {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassModification               {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstIndication                  {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstCreation                    {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstModification                {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstDeletion                    {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+__NotifyStatus                      {}                   {StatusCode}
+__ExtendedStatus                    {}                   {StatusCode, Description, Operation, ParameterInfo...}
+CIM_Error                           {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+MSFT_WmiError                       {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+MSFT_ExtendedStatus                 {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+__SecurityRelatedClass              {}                   {}
+__Trustee                           {}                   {Domain, Name, SID, SidLength...}
+__NTLMUser9X                        {}                   {Authority, Flags, Mask, Name...}
+__ACE                               {}                   {AccessMask, AceFlags, AceType, GuidInheritedObjectType...}
+__SecurityDescriptor                {}                   {ControlFlags, DACL, Group, Owner...}
+__PARAMETERS                        {}                   {}
+__SystemClass                       {}                   {}
+__ProviderRegistration              {}                   {provider}
+__EventProviderRegistration         {}                   {provider, EventQueryList}
+__ObjectProviderRegistration        {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__ClassProviderRegistration         {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__InstanceProviderRegistration      {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__MethodProviderRegistration        {}                   {provider}
+__PropertyProviderRegistration      {}                   {provider, SupportsGet, SupportsPut}
+__EventConsumerProviderRegistration {}                   {provider, ConsumerClassNames}
+__thisNAMESPACE                     {}                   {SECURITY_DESCRIPTOR}
+__NAMESPACE                         {}                   {Name}
+__IndicationRelated                 {}                   {}
+__FilterToConsumerBinding           {}                   {Consumer, CreatorSID, DeliverSynchronously, DeliveryQoS...}
+__EventConsumer                     {}                   {CreatorSID, MachineName, MaximumQueueSize}
+__AggregateEvent                    {}                   {NumberOfEvents, Representative}
+__TimerNextFiring                   {}                   {NextEvent64BitTime, TimerId}
+__EventFilter                       {}                   {CreatorSID, EventAccess, EventNamespace, Name...}
+__Event                             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__NamespaceOperationEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__NamespaceModificationEvent        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace, PreviousNamespace}
+__NamespaceDeletionEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__NamespaceCreationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__ClassOperationEvent               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassDeletionEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassModificationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass, PreviousClass}
+__ClassCreationEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__InstanceOperationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__InstanceCreationEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__MethodInvocationEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance, Method...}
+__InstanceModificationEvent         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance, PreviousInstance}
+__InstanceDeletionEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__TimerEvent                        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NumFirings, TimerId}
+__ExtrinsicEvent                    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__SystemEvent                       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__EventDroppedEvent                 {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer}
+__EventQueueOverflowEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__QOSFailureEvent                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__ConsumerFailureEvent              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__EventGenerator                    {}                   {}
+__TimerInstruction                  {}                   {SkipIfPassed, TimerId}
+__AbsoluteTimerInstruction          {}                   {SkipIfPassed, TimerId, EventDateTime}
+__IntervalTimerInstruction          {}                   {SkipIfPassed, TimerId, IntervalBetweenEvents}
+__Provider                          {}                   {Name}
+__Win32Provider                     {}                   {Name, ClientLoadableCLSID, CLSID, Concurrency...}
+__SystemSecurity                    {GetSD, GetSecuri... {}
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Windows\system32> Get-CimClass -Namespace root/SecurityCenter2 | where -Filter {$_.CimClassName -like "*product*"}
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Windows\system32> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | ft DisplayName
+
+DisplayName
+-----------
+VirusScan de McAfee
+Windows Defender
+
+
+PS C:\Windows\system32> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct
+
+
+displayName              : VirusScan de McAfee
+instanceGuid             : {4DE344F8-6897-65B4-CED0-82B3AF2591B4}
+pathToSignedProductExe   : C:\Program Files\McAfee.com\Agent\mcupdate.exe
+pathToSignedReportingExe : C:\Program Files\Common Files\mcafee\modulecore\ProtectedModuleHost.exe
+productState             : 458752
+timestamp                : Sat, 14 Mar 2020 05:11:08 GMT
+PSComputerName           :
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 397568
+timestamp                : Tue, 17 Mar 2020 19:45:38 GMT
+PSComputerName           :
+
+
+
+PS C:\Windows\system32> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | ft DisplayName
+
+DisplayName
+-----------
+Windows Defender
+VirusScan de McAfee
+
+
+PS C:\Windows\system32> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct
+
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 397568
+timestamp                : Sat, 14 Mar 2020 05:11:08 GMT
+PSComputerName           :
+
+displayName              : VirusScan de McAfee
+instanceGuid             : {F682A51C-4EAD-6A3A-F460-B9C1D4A2DB09}
+pathToSignedProductExe   : C:\Program Files\McAfee.com\Agent\mcupdate.exe
+pathToSignedReportingExe : C:\Program Files\Common Files\mcafee\modulecore\ProtectedModuleHost.exe
+productState             : 458752
+timestamp                : Sat, 14 Mar 2020 05:11:08 GMT
+PSComputerName           :
+
+
+
+PS C:\Windows\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200317200058
+**********************
